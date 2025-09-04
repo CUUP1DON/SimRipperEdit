@@ -1079,9 +1079,12 @@ namespace TS4SimRipper
             TGI lrleTGI = new TGI((uint)ResourceTypes.LRLE, tgi.Group, tgi.Instance);
             TGI rle2TGI = new TGI((uint)ResourceTypes.RLE2, tgi.Group, tgi.Instance);
             TGI ddsTGI = new TGI((uint)ResourceTypes.DDSuncompressed, tgi.Group, tgi.Instance);
+            TGI dstTGI = new TGI((uint)ResourceTypes.DDS, tgi.Group, tgi.Instance);
             Bitmap image = FetchGameImageFromLRLE(lrleTGI, outfitNumber, ref errorMsg, false);
             if (image != null) return image;
             image = FetchGameImageFromRLE(rle2TGI, false, outfitNumber, ref errorMsg, false);
+            if (image != null) return image;
+            image = FetchGameImageFromDST(dstTGI, outfitNumber, ref errorMsg);
             if (image != null) return image;
             if (includeDDS) image = FetchGameImageFromDDS(ddsTGI, outfitNumber, ref errorMsg, false);
             if (image == null) errorMsg += "Can't find or read texture, instance: 0x" + tgi.Instance.ToString("X16") + Environment.NewLine;

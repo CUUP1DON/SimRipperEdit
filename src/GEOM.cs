@@ -2120,6 +2120,14 @@ namespace TS4SimRipper
             if (!this.isValid) throw new MeshException("Not a valid mesh!");
             if (!meshToAppend.isValid) throw new MeshException("The mesh to be appended is not a valid mesh!");
 
+            var states = this.GeometryStates.Select(x => x.State).ToHashSet();
+            var appendStates = meshToAppend.GeometryStates.Select(x => x.State).ToHashSet();
+            if (!states.SetEquals(appendStates))
+            {
+                //Merging mixed geometry states not supported.
+                this.GeometryStates.Clear();
+                meshToAppend.GeometryStates.Clear();
+            }
             this.package += ", " + meshToAppend.package;
             ulong[] tmp = new ulong[this.instance.Length + meshToAppend.instance.Length];
             Array.Copy(this.instance, tmp, this.instance.Length);

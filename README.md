@@ -6,7 +6,7 @@
 > This program was originally created by [CmarNYC](https://modthesims.info/d/635720/ts4-simripper-classic-rip-sims-from-savegames-v3-14-2-0-updated-4-19-2023.html) & is currently being maintained by [andrews4s](https://github.com/CmarNYC-Tools/TS4SimRipper).
 
 ## Requirements
-This program requires [Microsoft .NET Desktop Runtime 10.0.1](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
+This program requires [Microsoft .NET Desktop Runtime 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 
 ## Download
 To download SimRipper, go to [Releases](https://github.com/CmarNYC-Tools/TS4SimRipper/releases) and click the .zip on the latest.

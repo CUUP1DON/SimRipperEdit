@@ -21,7 +21,7 @@ To download SimRipper, go to [Releases](https://github.com/CUUP1DON/TS4SimRipper
 - Exchanged DAE, OBJ and MS3D buttons for standard 'Save As...' dialog
 - Fixed issue with alpha meshes not being assigned their glass diffuse textures 
 - Adjusted the blender materials it creates so the roughness is a 1 and the specular is at 0. DAE is unchanged
-- Added loading bar and estimated time to remaining to start up
+- Added loading bar and estimated time remaining to start up
 - Added ability to use mouse left click & mouse scroll wheel to move, zoom & pan camera around sim
 
 ## TS4 Sim Ripper Changelog (1.8.2026)

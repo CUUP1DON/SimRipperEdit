@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\TS4 Sim Ripper\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj": {}
+    "d:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\Working\\TS4 Sim Ripper\\My Edit\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj": {}
   },
   "projects": {
-    "D:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\TS4 Sim Ripper\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj": {
+    "d:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\Working\\TS4 Sim Ripper\\My Edit\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj": {
       "version": "1.0.0.1",
       "restore": {
-        "projectUniqueName": "D:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\TS4 Sim Ripper\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj",
+        "projectUniqueName": "d:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\Working\\TS4 Sim Ripper\\My Edit\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj",
         "projectName": "TS4SimRipper",
-        "projectPath": "D:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\TS4 Sim Ripper\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj",
+        "projectPath": "d:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\Working\\TS4 Sim Ripper\\My Edit\\TS4 SimRipper\\src\\TS4SimRipper.NET.csproj",
         "packagesPath": "C:\\Users\\DREAMER\\.nuget\\packages\\",
-        "outputPath": "D:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\TS4 Sim Ripper\\TS4 SimRipper\\src\\obj\\",
+        "outputPath": "d:\\Custom Content Creation\\1-800-CUUPID & CUUPID CORP\\Blender Addons\\TS4 Ripper Fixer\\Working\\TS4 Sim Ripper\\My Edit\\TS4 SimRipper\\src\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

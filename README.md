@@ -14,15 +14,19 @@ This program requires [Microsoft .NET Desktop Runtime 10.0](https://dotnet.micro
 ## Download
 To download SimRipper, go to [Releases](https://github.com/CUUP1DON/TS4SimRipper/releases) and click the .zip on the latest.
 
+## TS4 Sim Ripper Changelog (2.16.2026)
+- Added added CASPART v52 support from the original repo. 
+
 ## TS4 Sim Ripper Changelog (1.10.2026)
 - Added user friendly error messages
 - Prevented UI from sticking when performing an invalid action
-- Added FBX export support (Does NOT support FBX Legacy import)
+- Added FBX export support
 - Exchanged DAE, OBJ and MS3D buttons for standard 'Save As...' dialog
 - Fixed issue with alpha meshes not being assigned their glass diffuse textures 
-- Adjusted the blender materials it creates so the roughness is a 1 and the specular is at 0. DAE is unchanged
+- Edited the blender materials it creates so the roughness is at 1 and the specular is at 0, DAE export is unchanged
 - Added loading bar and estimated time to remaining to start up
 - Added ability to use mouse left click & mouse scroll wheel to move, zoom & pan camera around sim
+
 
 ## TS4 Sim Ripper Changelog (1.8.2026)
 - Updated from .NET 6.0 to .NET 10.0

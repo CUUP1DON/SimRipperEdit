@@ -40,7 +40,8 @@ namespace TS4SimRipper
         GEOM[] GlassModel = null;
         GEOM[] WingsModel = null;
         string currentName;
-        string[] partNames = Enum.GetNames(typeof(BodyType));
+        // Index by BodyType numeric value (not Enum.GetNames order) so new/gap values don't misalign.
+        string[] partNames = BuildBodyTypePartNames();
         Species currentSpecies;
         AgeGender currentAge;
         AgeGender currentGender;
@@ -361,6 +362,21 @@ namespace TS4SimRipper
         //    return g;
         //}
 
+        private static string[] BuildBodyTypePartNames()
+        {
+            int max = Enum.GetValues(typeof(BodyType)).Cast<int>().Max();
+            string[] names = new string[max + 1];
+            foreach (BodyType bt in Enum.GetValues(typeof(BodyType)))
+            {
+                names[(int)bt] = bt.ToString();
+            }
+            for (int i = 0; i < names.Length; i++)
+            {
+                if (names[i] == null) names[i] = "BodyType_" + i;
+            }
+            return names;
+        }
+
         private void GetCurrentModel()
         {
             GetCurrentModel(false);
@@ -578,7 +594,14 @@ namespace TS4SimRipper
 
                     if (rejected && !(outfit[i].BodyType == BodyType.Hair)) continue;
 
-                    partGenders[(int)outfit[i].BodyType] = outfit[i].gender;
+                    int bodyTypeIndex = (int)outfit[i].BodyTypeNumeric;
+                    if (bodyTypeIndex < 0 || bodyTypeIndex >= partGenders.Length)
+                    {
+                        LogMe(log, "Skipping unsupported BodyType " + bodyTypeIndex + " for CASP 0x" +
+                            outfit[i].tgi.Instance.ToString("X16") + " (" + outfit[i].package + ")");
+                        continue;
+                    }
+                    partGenders[bodyTypeIndex] = outfit[i].gender;
 
                     LogMe(log, "Processing outfit textures");
                     Image texture = FetchGameTexture(outfit[i].LinkList[outfit[i].TextureIndex], outfitIndex, ref errorList, false);
@@ -653,6 +676,11 @@ namespace TS4SimRipper
                     if (skip) continue;
                     GEOM geom = meshRegions[m].geom;
                     if (geom == null) continue;
+                    if (ind < 0 || ind >= BaseModel.Length)
+                    {
+                        LogMe(log, "Skipping mesh for unsupported BodyType " + ind);
+                        continue;
+                    }
                     if (!geom.hasSeamStitches) geom.AutoSeamStitches(currentSpecies, currentAge, currentGender, 0);
                     if (currentSpecies == Species.Human)
                     {

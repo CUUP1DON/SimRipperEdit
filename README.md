@@ -14,6 +14,9 @@ This program requires [Microsoft .NET Desktop Runtime 10.0](https://dotnet.micro
 ## Download
 To download SimRipper, go to [Releases](https://github.com/CUUP1DON/TS4SimRipper/releases) and click the .zip on the latest.
 
+## TS4 Sim Ripper Changelog (9.21.2026)
+- Added support for Base Layer CAS type.
+
 ## TS4 Sim Ripper Changelog (2.16.2026)
 - Added CASPART v52 support from the original repo. 
 

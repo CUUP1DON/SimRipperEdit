@@ -320,6 +320,7 @@ namespace TS4SimRipper
         Wings,
         HeadDeco,
         SkinSpecularity,
+        BaseLayer,          // 117
     }
 
     public enum BodySubType
